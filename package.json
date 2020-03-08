@@ -1,5 +1,5 @@
 {
-    "name": "node-logs.tf",
+    "name": "logs.tf",
     "version": "0.1.2",
     "description": "A library that helps you interact with the logs.tf API. Currently a work in progress.",
     "main": "dist/index.js",
