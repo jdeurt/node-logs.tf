@@ -1,7 +1,7 @@
 {
     "name": "node-logs.tf",
     "version": "0.1.0",
-    "description": "A node module to use the logs.tf api.",
+    "description": "A library that helps you interact with the logs.tf API. Currently a work in progress.",
     "main": "dist/index.js",
     "keywords": [
         "tf2",

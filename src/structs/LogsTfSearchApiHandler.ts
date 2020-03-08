@@ -93,4 +93,4 @@ export class LogsTfSearchApiHandler {
     }
 }
 
-export default ApiPaginator;
+export default LogsTfSearchApiHandler;
