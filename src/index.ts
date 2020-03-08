@@ -1,10 +1,10 @@
-import { toId3, toId64 } from "./helpers/steamid";
-import { LogDataV3Scheme } from "./types/LogDataV3Scheme";
 import { LogFile } from "./structs/LogFile";
 import axios from "axios";
 import { LogsTfApiResponse } from "./types/LogsTfApiResponse";
 import { SteamId64 } from "./types/SteamId64";
 import { LogsTfSearchApiHandler } from "./structs/LogsTfSearchApiHandler";
+import { LogDataV3Scheme } from "./types/LogDataV3Scheme";
+import { LogDataHandler } from "./structs/LogDataHandler";
 
 declare interface SearchOptions {
     title: string,
@@ -49,13 +49,23 @@ export class LogsTfClient {
         });
     }
 
-    search({title, map, uploader, players}: Partial<SearchOptions>) {
+    getSearchResults({title, map, uploader, players}: Partial<SearchOptions>) {
         return new LogsTfSearchApiHandler({
             title,
             map,
             uploader,
             players
         });
+    }
+
+    async getLogData(logId: string) {
+        const response = await axios.get(`https://logs.tf/api/v1/log/${logId}`, {
+            responseType: "json"
+        });
+
+        const data: LogDataV3Scheme = response.data;
+
+        return new LogDataHandler(data);
     }
 }
 
