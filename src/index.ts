@@ -26,6 +26,10 @@ export class LogsTfClient {
         this._apiKey = apiKey;
     }
 
+    logFileFrom(filePath: string) {
+        return new LogFile(filePath);
+    }
+
     async upload(logFile: LogFile, options: { title: string, map: string, uploader?: string, updatelog?: string }): Promise<number> {
         const uploadResponse = await axios.post("https://logs.tf/upload", {
             ...options,
