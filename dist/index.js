@@ -3,6 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+const LogFile_1 = require("./structs/LogFile");
 const axios_1 = __importDefault(require("axios"));
 const LogsTfSearchApiHandler_1 = require("./structs/LogsTfSearchApiHandler");
 const LogDataHandler_1 = require("./structs/LogDataHandler");
@@ -10,6 +11,9 @@ const LogDataHandler_1 = require("./structs/LogDataHandler");
 class LogsTfClient {
     constructor(apiKey) {
         this._apiKey = apiKey;
+    }
+    logFileFrom(filePath) {
+        return new LogFile_1.LogFile(filePath);
     }
     async upload(logFile, options) {
         const uploadResponse = await axios_1.default.post("https://logs.tf/upload", {
