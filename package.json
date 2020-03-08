@@ -4,6 +4,9 @@
     "description": "A library that helps you interact with the logs.tf API. Currently a work in progress.",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc"
+    },
     "keywords": [
         "tf2",
         "logs.tf"
