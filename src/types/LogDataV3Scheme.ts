@@ -3,6 +3,7 @@ import Tf2PlayerStats from "./Tf2PlayerStats";
 import Tf2RoundData from "./Tf2RoundData";
 import LogsChatData from "./LogsChatData";
 import LogsKillstreakData from "./LogsKillstreakData";
+import { SteamId64 } from "./SteamId64";
 
 export interface LogDataV3Scheme {
     version: number,
@@ -86,10 +87,12 @@ export interface LogDataV3Scheme {
         title: string,
         date: number,
         uploader: {
-            id: string,
+            id: SteamId64,
             name: string,
             info: string
         }
     },
     killstreaks: LogsKillstreakData[]
-}
+};
+
+export default LogDataV3Scheme;
