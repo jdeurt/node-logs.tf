@@ -2,16 +2,22 @@
     "name": "node-logs.tf",
     "version": "0.0.1",
     "description": "A node module to use the logs.tf api.",
-    "keywords": ["tf2", "logs.tf"],
+    "main": "dist/index.js",
+    "keywords": [
+        "tf2",
+        "logs.tf"
+    ],
     "repository": "https://github.com/jdeurt/node-logs.tf.git",
     "homepage": "https://github.com/jdeurt/node-logs.tf",
     "author": "Juan de Urtubey <jdeurt@gmail.com>",
     "dependencies": {
-        "request": "~2.85.0",
-        "events": "~2.0.0"
+        "axios": "^0.19.2"
     },
-    "main": "index.js",
     "engines": {
-        "node": ">= 9.0.0"
+        "node": ">= 10.0.0"
+    },
+    "license": "MIT",
+    "devDependencies": {
+        "typescript": "^3.8.3"
     }
 }
