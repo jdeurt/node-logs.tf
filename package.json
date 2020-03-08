@@ -1,6 +1,6 @@
 {
     "name": "node-logs.tf",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "A node module to use the logs.tf api.",
     "main": "dist/index.js",
     "keywords": [
