@@ -2,6 +2,8 @@ import { LogFile } from "./structs/LogFile";
 import { SteamId64 } from "./types/SteamId64";
 import { LogsTfSearchApiHandler } from "./structs/LogsTfSearchApiHandler";
 import { LogDataHandler } from "./structs/LogDataHandler";
+export * from "./helpers/steamid";
+export * from "./structs/LogDataHandler";
 declare interface SearchOptions {
     title: string;
     map: string;
