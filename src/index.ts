@@ -6,6 +6,9 @@ import { LogsTfSearchApiHandler } from "./structs/LogsTfSearchApiHandler";
 import { LogDataV3Scheme } from "./types/LogDataV3Scheme";
 import { LogDataHandler } from "./structs/LogDataHandler";
 
+export * from "./helpers/steamid";
+export * from "./structs/LogDataHandler";
+
 declare interface SearchOptions {
     title: string,
     map: string,
